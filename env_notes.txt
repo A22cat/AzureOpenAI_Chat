@@ -1,0 +1,5 @@
+#イコール=のあと、スペースや"を入れないで書く。
+AZURE_OPENAI_API_KEY=YOUR_AZURE_OPENAI_KEY    #例：ZmJxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxOGkU39   # AzureポータルからコピーしたAPIキーを貼り付けます。
+AZURE_OPENAI_ENDPOINT=YOUR_AZURE_OPENAI_ENDPOINT #例：https://openai-xxx-sample.openai.azure.com/    # Azureポータルからコピーしたエンドポイントを貼り付けます。
+AZURE_OPENAI_API_VERSION=YYYY-MM-DD-preview    #例：2023-12-01-preview   #超重要（モデルバージョン）
+AZURE_OPENAI_DEPLOYMENT_NAME=gpt-xxx    #例：gpt-4o-chat-name    # Azureで作ったデプロイメント名
