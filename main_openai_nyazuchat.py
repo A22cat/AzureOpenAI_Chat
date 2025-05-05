@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 from openai import AzureOpenAI
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 
 # ページタイトル表示
