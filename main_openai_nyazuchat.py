@@ -1,12 +1,13 @@
 import streamlit as st
 import openai
-from openai import AzureOpenAI
 import os
-#from dotenv import load_dotenv
 
-
-# ページタイトル表示
-st.title("Azure OpenAI チャット")
+# ★ここに st.set_page_config() を移動（import直後！）★
+st.set_page_config(
+    page_title="Azure OpenAI チャット",
+    page_icon="🐱",
+    layout="centered",
+)
 
 # AzureポータルからコピーしたAPIキーとエンドポイントを.envファイルに貼り付けます。
 #API_KEY = "YOUR_AZURE_OPENAI_API_KEY"
@@ -20,11 +21,12 @@ API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 api_version = os.getenv("AZURE_OPENAI_API_VERSION")    # これ超重要（画面のモデル バージョンでは動かず、2023-12-01-previewで動く）
 model_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")    # Azureで作ったデプロイメント名
+
 # 以降はAPI_KEY, ENDPOINT, api_version, model_nameを使う
-#print(API_KEY)
-#print(ENDPOINT)
-#print(api_version)
-#print(model_name)
+print(API_KEY)
+print(ENDPOINT)
+print(api_version)
+print(model_name)
 
 # Azure OpenAIクライアントを作成 
 client = openai.AzureOpenAI(
@@ -33,13 +35,10 @@ client = openai.AzureOpenAI(
     api_version=api_version
 )
 
-# ページの基本設定（タイトル・猫アイコン・レイアウト）
-st.set_page_config(
-    page_title="Azure OpenAI チャット",
-    page_icon="🐱",
-    layout="centered",
-)
+print(client)
 
+# ページタイトル表示
+st.title("Azure OpenAI チャット")
 
 # セッションにチャット履歴がなければ初期化
 if "messages" not in st.session_state:
