@@ -7,7 +7,7 @@
 ## 📝 概要
 Azure OpenAI チャットのWebアプリ
 
-- アプリ名：NyAzuChat（ニャアズチャット）
+- アプリ名：NyAzuChat（ニャアズチャット）  
 → Nya(猫の鳴き声ニャー) + Azure(アジュール) + Chat(チャット) の略語。
 
 ## 🛠️ 技術スタック
